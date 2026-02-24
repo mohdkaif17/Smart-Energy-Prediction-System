@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<nav class="nav">
+  <a href="/">Home</a>
+  <a href="/predict-page">Predict</a>
+  <a href="/dashboard">Dashboard</a>
+  <a href="/csv">CSV Upload</a>
+  <a href="/about">About</a>
+</nav>
+
+<div class="stats">
+  <div class="stat">
+    <h3>Latest Prediction</h3>
+    <div id="latest" class="val">—</div>
+    <small class="hint">Most recent kWh estimate</small>
+  </div>
+  <div class="stat">
+    <h3>Max (Session)</h3>
+    <div id="max" class="val">—</div>
+    <small class="hint">Highest value in this session</small>
+  </div>
+  <div class="stat">
+    <h3>Avg (Session)</h3>
+    <div id="avg" class="val">—</div>
+    <small class="hint">Average of predictions so far</small>
+  </div>
+</div>
+
+<div class="card center">
+  <h2>Live Energy Trend 📈</h2>
+  <p class="muted">Make predictions to see the trend update in real time.</p>
+  <canvas id="energyChart" width="600" height="280"></canvas>
+  <p class="note">Tip: Try different temperatures to observe changes.</p>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

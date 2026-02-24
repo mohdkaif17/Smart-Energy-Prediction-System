@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predict Energy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<nav class="nav">
+  <a href="/">Home</a>
+  <a href="/predict-page">Predict</a>
+  <a href="/dashboard">Dashboard</a>
+  <a href="/csv">CSV Upload</a>
+  <a href="/about">About</a>
+</nav>
+
+<div class="card center">
+  <h2>Instant Energy Prediction ⚡</h2>
+  <p class="muted">Enter current conditions to estimate energy usage (kWh).</p>
+
+  <label>Temperature (°C)</label>
+  <input id="temp" type="number" placeholder="e.g., 30" value="30">
+  <small class="hint">Higher temperature increases cooling load.</small>
+
+  <label>Humidity (%)</label>
+  <input id="humidity" type="number" placeholder="e.g., 60" value="60">
+  <small class="hint">High humidity increases energy consumption.</small>
+
+  <button onclick="getPrediction()">Analyze & Predict</button>
+
+  <p class="muted" style="margin-top:10px;">Estimated Load:</p>
+  <h3 id="result">0.00 kWh</h3>
+
+  <p class="note">Powered by Machine Learning (Random Forest). Results are estimates.</p>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

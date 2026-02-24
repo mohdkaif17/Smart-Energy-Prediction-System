@@ -1,0 +1,86 @@
+:root {
+  --bg: #0b0e14;
+  --card: #161b22;
+  --accent: #00d4ff;
+  --text: #e6edf3;
+  --dim: #8b949e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: #0d1117;
+  border-bottom: 1px solid #30363d;
+}
+
+.nav a { color: var(--dim); margin-left: 16px; text-decoration: none; }
+.nav a:hover { color: var(--accent); }
+
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: var(--accent);
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 480px;
+  margin: 40px auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transition: .25s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,212,255,.2); }
+
+.center { text-align: center; }
+
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: #fff;
+}
+
+button {
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tagline { font-size: 1.4rem; color: #00d4ff; margin: 8px 0; }
+.subtitle { opacity: .85; max-width: 720px; margin: 0 auto; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+.muted { opacity: .75; }
+.hint { display:block; opacity:.65; font-size:.85rem; margin-top:4px; }
+.note { opacity:.7; font-size:.9rem; margin-top:8px; }
+.footer { text-align:center; padding: 24px; opacity:.7; }
+.list { text-align:left; max-width:520px; margin: 12px auto; }
+.stats { display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; max-width: 900px; margin: 20px auto; padding: 0 16px; }
+.stat { background:#161b22; border:1px solid #30363d; border-radius:12px; padding:16px; text-align:center; }
+.stat .val { font-size: 1.6rem; color:#00d4ff; font-weight:700; }

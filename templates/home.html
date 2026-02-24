@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartEnergy AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<nav class="nav">
+  <a href="/">Home</a>
+  <a href="/predict-page">Predict</a>
+  <a href="/dashboard">Dashboard</a>
+  <a href="/csv">CSV Upload</a>
+  <a href="/about">About</a>
+</nav>
+
+<section class="hero">
+  <h1>⚡ SmartEnergy AI</h1>
+  <p class="tagline">Predict Today. Save Tomorrow.</p>
+  <p class="subtitle">
+    AI-powered energy consumption prediction to help reduce bills and optimize usage.
+  </p>
+  <div style="margin-top:16px;">
+    <a href="/predict-page" class="cta">Start Predicting ⚡</a>
+    <a href="/dashboard" class="cta" style="margin-left:8px; background:#1f2933; color:#00d4ff;">View Dashboard 📊</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="card">
+    <h3>🔮 AI Predictions</h3>
+    <p>Get instant kWh estimates using a trained Machine Learning model.</p>
+  </div>
+  <div class="card">
+    <h3>📈 Live Dashboard</h3>
+    <p>Visualize trends and insights as you make predictions.</p>
+  </div>
+  <div class="card">
+    <h3>📂 Monthly Bill Estimator</h3>
+    <p>Upload CSV to estimate total consumption and bill.</p>
+  </div>
+  <div class="card">
+    <h3>🌱 Energy Tips</h3>
+    <p>Get simple tips to reduce electricity usage.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 SmartEnergy AI — Predict. Optimize. Save.</p>
+</footer>
+</body>
+</html>

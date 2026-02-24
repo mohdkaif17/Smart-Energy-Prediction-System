@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV Upload</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<nav class="nav">
+  <a href="/">Home</a>
+  <a href="/predict-page">Predict</a>
+  <a href="/dashboard">Dashboard</a>
+  <a href="/csv">CSV Upload</a>
+  <a href="/about">About</a>
+</nav>
+
+<div class="card center">
+  <h2>Estimate Your Annual Energy Bill 📂</h2>
+  <p class="muted">Upload daily readings to estimate total kWh and bill.</p>
+
+  <input type="file" id="csvFile" accept=".csv">
+  <small class="hint">CSV columns: Temperature, Humidity</small>
+
+  <button onclick="uploadCSV()">Predict Monthly Bill</button>
+
+  <p class="muted" style="margin-top:12px;">Estimated Monthly Consumption:</p>
+  <h3 id="monthly-result">0.00 kWh</h3>
+
+  <p class="muted">Estimated Bill:</p>
+  <h3 id="bill-result">₹ 0</h3>
+
+  <p class="note">Tip: Reducing average temperature by 1–2°C can save energy.</p>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
